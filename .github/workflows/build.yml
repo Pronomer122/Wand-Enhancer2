@@ -1,0 +1,16 @@
+name: Build Executable
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Download source code
+        uses: actions/checkout@v7
+
+      - name: Show source files
+        run: Get-ChildItem
+        shell: pwsh
